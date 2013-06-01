@@ -1,7 +1,7 @@
--- We saved out company as a lua file, so we can just call "dofile", which parses our company in a right table. 
+-- We saved out company as a Lua file, so we can just call "dofile", which parses our company in a right table. 
 -- For simplicity reasons we just return the data inside the data file and don't perform any kind of validation.
 -- But there is nothing to stop us from calling a "parseCompany { ... }" function, which does all kind of fancy stuff.
--- Ofcause the function must be in the global scope, or lua won't find it, since it is in another code chunk.
+-- Of cause the function must be in the global scope, or Lua won't find it, since it is in another code chunk.
 company = dofile("data.lua")
 
 -- calculates the total salary of the object we give it
@@ -24,7 +24,7 @@ function total( o )
     return t
 end
 
--- Looks like we need to cut some salarys!
+-- Looks like we need to cut some salaries!
 function cut( o )
     -- We do the same kind of recursion in here, but instead of just getting the values we change them.
     if type(o) == "table" then
